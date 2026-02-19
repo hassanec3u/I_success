@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const WHATSAPP_NUMBER = "22797596060";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Bonjour ILLIMI SUCCESS ! Je souhaite avoir des informations sur vos services d'accompagnement étudiant."
+  "Bonjour I-Success ! Je souhaite avoir des informations sur vos services d'accompagnement étudiant."
 );
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import Image from "next/image";
 
 const highlights = [
   "Inscription Campus France",
@@ -62,7 +63,7 @@ export default function Hero() {
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-blue-100/80">
               Inscription, Orientation, Visa, Logement.{" "}
-              <strong className="text-white">ILLIMI SUCCESS</strong> vous
+              <strong className="text-white">I-Success</strong> vous
               accompagne de Niamey jusqu&apos;à votre campus en France,
               Turquie, Canada et plus encore.
             </p>
@@ -126,101 +127,61 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="relative hidden lg:block"
           >
-            <div className="relative">
-              {/* Main visual card */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
-                  <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-brand-orange-500 shadow-2xl shadow-brand-orange-500/30">
-                    <span className="text-5xl">🎓</span>
-                  </div>
-                  <p className="text-center text-2xl font-extrabold text-white">
-                    Votre avenir
-                    <br />
-                    commence ici
-                  </p>
-                  <p className="mt-3 text-center text-sm text-blue-200/60">
-                    Photo d&apos;étudiants diplômés
-                  </p>
-                </div>
+            <div className="relative flex flex-col items-center gap-6">
+              {/* Main image — full width, natural landscape ratio */}
+              <div className="relative w-full overflow-hidden rounded-3xl border-2 border-white/15 shadow-2xl">
+                <Image
+                  src="/hero/photo_hero.jpg"
+                  alt="Étudiants accompagnés par I-Success"
+                  width={960}
+                  height={501}
+                  className="h-auto w-full"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                />
               </div>
 
-              {/* Floating cards */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                className="absolute -left-6 top-12 rounded-2xl border border-white/10 bg-white p-4 shadow-2xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-blue-50 text-lg">
-                    🇫🇷
+              {/* Badges row below the image */}
+              <div className="flex w-full items-center justify-between gap-3">
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  className="rounded-2xl bg-white px-4 py-3 shadow-xl"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-xl">🇫🇷</span>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">France</p>
+                      <p className="text-[11px] text-gray-500">Campus France</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">France</p>
-                    <p className="text-xs text-gray-500">Campus France</p>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
 
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 4,
-                  delay: 1,
-                  ease: "easeInOut",
-                }}
-                className="absolute -right-6 bottom-16 rounded-2xl border border-white/10 bg-white p-4 shadow-2xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-lg">
-                    🇨🇦
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">Canada</p>
-                    <p className="text-xs text-gray-500">
-                      Permis d&apos;études
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+                <motion.div
+                  animate={{ y: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                  className="rounded-2xl bg-brand-orange-500 px-5 py-3 shadow-xl shadow-brand-orange-500/30"
+                >
+                  <p className="text-2xl font-extrabold text-white">500+</p>
+                  <p className="text-xs font-medium text-orange-100">
+                    Étudiants accompagnés
+                  </p>
+                </motion.div>
 
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 3.5,
-                  delay: 0.5,
-                  ease: "easeInOut",
-                }}
-                className="absolute -right-4 top-1/3 rounded-2xl border border-white/10 bg-white p-4 shadow-2xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-lg">
-                    🇹🇷
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 3.5, delay: 0.5, ease: "easeInOut" }}
+                  className="rounded-2xl bg-white px-4 py-3 shadow-xl"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-xl">🇨🇦</span>
+                    <div>
+                      <p className="text-sm font-bold text-gray-900">Canada</p>
+                      <p className="text-[11px] text-gray-500">Permis d&apos;études</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">Turquie</p>
-                    <p className="text-xs text-gray-500">Bourses Türkiye</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Stats floating card */}
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 5,
-                  delay: 2,
-                  ease: "easeInOut",
-                }}
-                className="absolute -left-4 bottom-1/4 rounded-2xl bg-brand-orange-500 p-4 shadow-2xl shadow-brand-orange-500/30"
-              >
-                <p className="text-2xl font-extrabold text-white">500+</p>
-                <p className="text-xs font-medium text-orange-100">
-                  Étudiants accompagnés
-                </p>
-              </motion.div>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -1,10 +1,10 @@
-# ILLIMI SUCCESS — Landing Page
+# I-Success — Landing Page
 
-Landing page pour **ILLIMI SUCCESS**, agence d'accompagnement étudiant basée à Niamey, Niger.
+Landing page pour **I-Success**, agence d'accompagnement étudiant basée à Niamey, Niger.
 
 ## À propos
 
-ILLIMI SUCCESS accompagne les étudiants nigériens dans leurs démarches pour étudier à l'étranger : orientation, inscriptions (Campus France, universités privées), assistance visa, accueil et logement.
+I-Success accompagne les étudiants nigériens dans leurs démarches pour étudier à l'étranger : orientation, inscriptions (Campus France, universités privées), assistance visa, accueil et logement.
 
 ### Destinations
 

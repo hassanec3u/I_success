@@ -5,13 +5,13 @@ import {
   Phone,
   Mail,
   MapPin,
-  GraduationCap,
   Facebook,
   Instagram,
   ArrowRight,
   Clock,
   MessageCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Accueil", href: "#accueil" },
@@ -156,18 +156,14 @@ export default function Footer() {
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <a href="#accueil" className="flex items-center gap-2.5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange-500 shadow-md">
-                  <GraduationCap className="h-6 w-6 text-white" />
-                </div>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan-400">
-                    Illimi
-                  </span>
-                  <span className="text-lg font-extrabold tracking-tight text-white">
-                    SUCCESS
-                  </span>
-                </div>
+              <a href="#accueil" className="flex items-center">
+                <Image
+                  src="/logo.png"
+                  alt="I-Success"
+                  width={160}
+                  height={48}
+                  className="h-10 w-auto brightness-0 invert"
+                />
               </a>
               <p className="mt-4 text-sm leading-relaxed text-blue-200/50">
                 Votre partenaire de confiance pour réussir vos études à
@@ -247,7 +243,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-blue-700 pt-8 sm:flex-row">
             <p className="text-xs text-blue-200/40">
-              © {new Date().getFullYear()} ILLIMI SUCCESS. Tous droits
+              © {new Date().getFullYear()} I-Success. Tous droits
               réservés.
             </p>
             <p className="text-xs text-blue-200/40">

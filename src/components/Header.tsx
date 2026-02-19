@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
@@ -37,26 +38,15 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center gap-2.5">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange-500 shadow-md">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className={`text-[10px] font-bold uppercase tracking-[0.25em] ${
-                  scrolled ? "text-brand-blue-500" : "text-brand-cyan-300"
-                }`}
-              >
-                Illimi
-              </span>
-              <span
-                className={`text-lg font-extrabold tracking-tight ${
-                  scrolled ? "text-brand-blue-500" : "text-white"
-                }`}
-              >
-                SUCCESS
-              </span>
-            </div>
+          <a href="#accueil" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="I-Success"
+              width={160}
+              height={48}
+              className="h-10 w-auto md:h-12"
+              priority
+            />
           </a>
 
           {/* Desktop nav */}

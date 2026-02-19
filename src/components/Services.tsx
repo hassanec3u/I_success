@@ -86,7 +86,7 @@ export default function Services() {
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             De la première consultation jusqu&apos;à votre arrivée sur le
-            campus, ILLIMI SUCCESS est à vos côtés à chaque étape.
+            campus, I-Success est à vos côtés à chaque étape.
           </p>
         </motion.div>
 

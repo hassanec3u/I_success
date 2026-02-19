@@ -9,7 +9,7 @@ const testimonials = [
     destination: "France 🇫🇷",
     university: "Université de Lyon",
     quote:
-      "Grâce à ILLIMI SUCCESS, j'ai obtenu mon visa Campus France du premier coup. Leur équipe m'a guidée pas à pas, de la constitution de mon dossier jusqu'à la préparation de l'entretien. Je suis maintenant en Master à Lyon !",
+      "Grâce à I-Success, j'ai obtenu mon visa Campus France du premier coup. Leur équipe m'a guidée pas à pas, de la constitution de mon dossier jusqu'à la préparation de l'entretien. Je suis maintenant en Master à Lyon !",
     initials: "AB",
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     destination: "Turquie 🇹🇷",
     university: "Istanbul University",
     quote:
-      "Je ne savais pas par où commencer pour étudier à l'étranger. ILLIMI SUCCESS m'a tout expliqué et m'a aidé à décrocher une bourse Türkiye Bursları. Aujourd'hui, je vis mon rêve à Istanbul.",
+      "Je ne savais pas par où commencer pour étudier à l'étranger. I-Success m'a tout expliqué et m'a aidé à décrocher une bourse Türkiye Bursları. Aujourd'hui, je vis mon rêve à Istanbul.",
     initials: "MK",
   },
   {
