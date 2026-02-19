@@ -1,0 +1,247 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  GraduationCap,
+  Facebook,
+  Instagram,
+  ArrowRight,
+  Clock,
+  MessageCircle,
+} from "lucide-react";
+
+const quickLinks = [
+  { label: "Accueil", href: "#accueil" },
+  { label: "Nos Services", href: "#services" },
+  { label: "Destinations", href: "#destinations" },
+  { label: "Témoignages", href: "#temoignages" },
+];
+
+const serviceLinks = [
+  "Orientation & Conseil",
+  "Inscriptions Campus France",
+  "Assistance Visa",
+  "Accueil & Logement",
+];
+
+export default function Footer() {
+  return (
+    <>
+      {/* Contact / CTA Section */}
+      <section
+        id="contact"
+        className="relative overflow-hidden bg-brand-blue-500 py-20 lg:py-28"
+      >
+        {/* Decorative */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full border-[4px] border-brand-orange-500/10" />
+          <div className="absolute -right-24 bottom-0 h-[400px] w-[400px] rounded-full border-[3px] border-brand-cyan-500/10" />
+          <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[2px] border-white/5" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* CTA Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <span className="inline-block rounded-full bg-brand-orange-500/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-orange-400">
+              Contactez-nous
+            </span>
+            <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Prêt à{" "}
+              <span className="text-brand-orange-400">démarrer</span> votre
+              aventure ?
+            </h2>
+            <p className="mt-4 text-lg text-blue-100/70">
+              Prenez rendez-vous dès maintenant avec l&apos;un de nos
+              conseillers. L&apos;accompagnement commence par un simple appel.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="tel:+22797596060"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-orange-500 px-8 py-4 text-base font-bold text-white shadow-xl shadow-brand-orange-500/30 transition-all hover:bg-brand-orange-600 hover:shadow-2xl hover:-translate-y-0.5"
+              >
+                <Phone className="h-5 w-5" />
+                +227 97 59 60 60
+              </a>
+              <a
+                href="mailto:illimisuccess1@gmail.com"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
+              >
+                <Mail className="h-5 w-5" />
+                Envoyer un email
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Contact info cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-16 grid gap-6 sm:grid-cols-3"
+          >
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-500/20">
+                <MapPin className="h-6 w-6 text-brand-orange-400" />
+              </div>
+              <h3 className="font-bold text-white">Notre adresse</h3>
+              <p className="mt-2 text-sm text-blue-100/60">
+                Quartier Yantala, face camping touristique, Niamey, Niger
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-cyan-500/20">
+                <Clock className="h-6 w-6 text-brand-cyan-400" />
+              </div>
+              <h3 className="font-bold text-white">Horaires</h3>
+              <p className="mt-2 text-sm text-blue-100/60">
+                Lundi – Vendredi : 8h – 18h
+                <br />
+                Samedi : 9h – 13h
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange-500/20">
+                <MessageCircle className="h-6 w-6 text-brand-orange-400" />
+              </div>
+              <h3 className="font-bold text-white">Réseaux sociaux</h3>
+              <div className="mt-3 flex justify-center gap-3">
+                <a
+                  href="https://www.facebook.com/illimisuccess/?locale=fr_FR"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-brand-orange-500 hover:scale-110"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/illimi_success/"
+                  
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-brand-orange-500 hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-brand-blue-700 bg-brand-blue-800 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Brand */}
+            <div className="lg:col-span-1">
+              <a href="#accueil" className="flex items-center gap-2.5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange-500 shadow-md">
+                  <GraduationCap className="h-6 w-6 text-white" />
+                </div>
+                <div className="flex flex-col leading-none">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-brand-cyan-400">
+                    Illimi
+                  </span>
+                  <span className="text-lg font-extrabold tracking-tight text-white">
+                    SUCCESS
+                  </span>
+                </div>
+              </a>
+              <p className="mt-4 text-sm leading-relaxed text-blue-200/50">
+                Votre partenaire de confiance pour réussir vos études à
+                l&apos;étranger depuis le Niger.
+              </p>
+            </div>
+
+            {/* Quick links */}
+            <div>
+              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-orange-400">
+                Navigation
+              </h4>
+              <ul className="space-y-2.5">
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="flex items-center gap-1.5 text-sm text-blue-200/60 transition-colors hover:text-white"
+                    >
+                      <ArrowRight className="h-3 w-3 text-brand-orange-500/50" />
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-orange-400">
+                Nos Services
+              </h4>
+              <ul className="space-y-2.5">
+                {serviceLinks.map((s) => (
+                  <li key={s}>
+                    <span className="flex items-center gap-1.5 text-sm text-blue-200/60">
+                      <ArrowRight className="h-3 w-3 text-brand-orange-500/50" />
+                      {s}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-orange-400">
+                Contact
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2.5 text-sm text-blue-200/60">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange-400" />
+                  Quartier Yantala, Niamey, Niger
+                </li>
+                <li>
+                  <a
+                    href="tel:+22797596060"
+                    className="flex items-center gap-2.5 text-sm text-blue-200/60 transition-colors hover:text-white"
+                  >
+                    <Phone className="h-4 w-4 text-brand-orange-400" />
+                    +227 97 59 60 60
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:illimisuccess1@gmail.com"
+                    className="flex items-center gap-2.5 text-sm text-blue-200/60 transition-colors hover:text-white"
+                  >
+                    <Mail className="h-4 w-4 text-brand-orange-400" />
+                    illimisuccess1@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-blue-700 pt-8 sm:flex-row">
+            <p className="text-xs text-blue-200/40">
+              © {new Date().getFullYear()} ILLIMI SUCCESS. Tous droits
+              réservés.
+            </p>
+            <p className="text-xs text-blue-200/40">
+              Fait avec ❤️ à Niamey, Niger
+            </p>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
