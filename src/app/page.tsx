@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Destinations from "@/components/Destinations";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Destinations />
       <Testimonials />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
